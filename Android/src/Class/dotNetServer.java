@@ -18,6 +18,9 @@ import android.widget.Toast;
 public final class dotNetServer {
 	static final String SERVER_URL = "gcm.erdembas.net/api/value";
 	public static final String SENDER_ID = "608017495537";
+	 public static final String DISPLAY_MESSAGE_ACTION =
+	            "net.erdembas.gcmandroid.DISPLAY_MESSAGE";
+	  public static final String EXTRA_MESSAGE = "content";
 
 	public static void ServerKayit(final Context CTX, String EMail,
 			String REGID) {
@@ -49,5 +52,12 @@ public final class dotNetServer {
 		});
 
 	}
+	
+	
+	public static void mesajGoster(Context context, String message) {
+	        Intent intent = new Intent(DISPLAY_MESSAGE_ACTION);
+	        intent.putExtra(EXTRA_MESSAGE, message);
+	        context.sendBroadcast(intent);
+	    }
 
 }

@@ -30,6 +30,9 @@ public class GCMIntentService extends GCMBaseIntentService {
 	}
 
 	protected void onMessage(Context context, Intent intent) {
+		 String message = intent.getStringExtra("content");
+		  dotNetServer.mesajGoster(context, message);
+	      
 	}
 
 	protected void onDeletedMessages(Context context, int total) {
