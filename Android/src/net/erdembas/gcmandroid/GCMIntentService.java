@@ -21,7 +21,7 @@ public class GCMIntentService extends GCMBaseIntentService {
 	protected void onRegistered(Context context, String registrationId) {
 		dotNetServer.ServerKayit(context,
 				Base.SistemMailAdres(getApplicationContext()), registrationId);
-		Toast.makeText(getApplicationContext(), getString(R.string.gcm_basarili), Toast.LENGTH_SHORT)
+		Toast.makeText(context.getApplicationContext(), getString(R.string.gcm_basarili), Toast.LENGTH_SHORT)
 				.show();
 	}
 

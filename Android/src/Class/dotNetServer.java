@@ -41,7 +41,6 @@ public final class dotNetServer {
 		PostAt.execute("http://gcm.erdembas.net/api/value", OBJ.toString());
 		PostAt.setDataDownloadListener(new ThreadPost.DataDownloadListener() {
 			public void dataDownloadedSuccessfully(String data) {
-				Toast.makeText(CTX, OBJ.toString(), Toast.LENGTH_SHORT).show();
 				if (data == "True") {
 					
 				} else {
