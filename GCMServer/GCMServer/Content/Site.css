@@ -632,9 +632,9 @@ tr.pager td {
             padding: 0;
         }
 
-        #login a:hover {
-            color: #333;
-        }
+            #login a:hover {
+                color: #333;
+            }
 
     /* menu */
     nav {
@@ -699,12 +699,12 @@ tr.pager td {
                 background: none;
             }
 
-     /* features */
-     section.feature {
+    /* features */
+    section.feature {
         float: none;
         padding: 10px;
         width: auto;
-     }
+    }
 
         section.feature img {
             color: #999;
@@ -754,3 +754,18 @@ tr.pager td {
             margin: 0;
         }
 }
+
+
+table			{ border: 5px solid #DDDDDD; }
+table caption 		{ background: none #959595; color: #FFFFFF; font-size: 14px; padding: 5px 11px 5px 11px; text-align: left; }
+table tr:hover		{ background: url('./images/bck_black_10.png'); }
+table th			{ background: #DDDDDD; border-bottom: 1px solid #FFFFFF; line-height: 22px; padding: 4px 6px 4px 6px; color: #333333; white-space: nowrap; text-align: left; }
+table thead th		{ padding-top: 2px; }
+table thead td		{ background: #DDDDDD; border-bottom: 1px solid #FFFFFF; text-align: left; line-height: 22px; padding: 2px 6px 4px 6px; white-space: nowrap; }
+table tbody th,
+table tbody .title	{ background: url('./images/bck_black_5.png'); font-weight: bold; white-space: nowrap; color: #666666; }
+table td			{ background: url('./images/bck_white_10.png'); border-bottom: 1px solid #DDDDDD; line-height: 22px; padding: 4px 6px 4px 6px; }
+table .icon16		{ margin-top: 3px; margin-bottom: 3px; }
+table td.vcenter		{ vertical-align: middle; }
+table td p		{ padding-bottom: 3px; padding-top: 3px; }
+

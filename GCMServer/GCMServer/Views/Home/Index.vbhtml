@@ -1,47 +1,76 @@
-﻿@Code
+﻿@ModelType IEnumerable(Of GCMServer.Kullanici)
+@Code
     ViewData("Title") = "Home Page"
 End Code
 
+<script src="~/Scripts/jquery-1.7.1.min.js"></script>
+<script src="~/Content/SimpleModal/simple-modal.js"></script>
+<link href="~/Content/SimpleModal/simplemodal.css" rel="stylesheet" />
 @section featured
     <section class="featured">
         <div class="content-wrapper">
             <hgroup class="title">
-                <h1>@ViewData("Title").</h1>
-                <h2>@ViewData("Message")</h2>
+                <h2>VB.NET ile Servera kayıt olmuş telefonlara istediğiniz mesajları gönderebilirsiniz... </h2>
             </hgroup>
-            <p>
-                To learn more about ASP.NET MVC visit
-                <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
-                The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET MVC.
-                If you have any questions about ASP.NET MVC visit
-                <a href="http://forums.asp.net/1146.aspx/1?MVC" title="ASP.NET MVC Forum">our forums</a>.
-            </p>
+
         </div>
     </section>
 End Section
 
-<h3>We suggest the following:</h3>
-<ol class="round">
-    <li class="one">
-        <h5>Getting Started</h5>
-        ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-        enables a clean separation of concerns and that gives you full control over markup
-        for enjoyable, agile development. ASP.NET MVC includes many features that enable
-        fast, TDD-friendly development for creating sophisticated applications that use
-        the latest web standards.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245151">Learn more…</a>
-    </li>
+<h3>Kayıtlı Cihazlar</h3>
+<table class="table1">
+    <thead>
+        <tr>
+            <th>RegID</th>
+            <th>E-Mail</th>
+            <th>Kayıt Tarih</th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @For Each item In Model
+            @<tr style="width:100%">
+                <td style="border-right:1px dashed"><a href="javascript:RegIDGoster('@item.GCM_Reg_ID')">Göster</a></td>
+                <td style="border-right:1px dashed">@item.EMail</td>
+                <td style="border-right:1px dashed">@FormatDateTime(item.Tarih,DateFormat.ShortDate)</td>
+                <td><a href="javascript:MesajGonder('@item.GCM_Reg_ID')">Mesaj Gönder</a></td>
+            </tr>
+        Next
+    </tbody>
 
-    <li class="two">
-        <h5>Add NuGet packages and jump-start your coding</h5>
-        NuGet makes it easy to install and update free libraries and tools.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245153">Learn more…</a>
-    </li>
 
-    <li class="three">
-        <h5>Find Web Hosting</h5>
-        You can easily find a web hosting company that offers the right mix of features
-        and price for your applications.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn more…</a>
-    </li>
-</ol>
+</table>
+
+
+
+
+<script>
+    function RegIDGoster(ID) {
+        $.fn.SimpleModal({
+            model: 'modal',
+            title: 'Cihaz RegID',
+            contents: ID
+        }).addButton('Kapat', 'btn').showModal();
+    }
+
+    function MesajGonder(ID) {
+        $.fn.SimpleModal({
+            model: 'modal',
+            width: '350',
+            title: 'Mesajınız',
+            contents: '<textarea id="Mesaj" style="width:305px"></textarea>'
+        }).addButton('Gönder', 'btn primary', function () {
+            $.ajax({
+                type: 'POST',
+                data: { RegID: ID, sCommand: $("#Mesaj").val() },
+                url: '/Home/KomutGonder',
+                success: function (r) {
+                    alert(r);
+                }
+            })
+
+            this.hideModal();
+    
+        }).addButton('Kapat', 'btn').showModal();
+    }
+</script>
