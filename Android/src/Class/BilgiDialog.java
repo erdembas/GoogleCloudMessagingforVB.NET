@@ -6,7 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 
 public class BilgiDialog {
-	public void Goster(Context context, String title, String message,
+	public static void Goster(Context context, String title, String message,
             Boolean status) {
         AlertDialog alertDialog = new AlertDialog.Builder(context).create();
         alertDialog.setTitle(title);
