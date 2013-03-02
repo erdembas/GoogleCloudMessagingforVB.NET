@@ -13,7 +13,6 @@ Imports System.Collections.Generic
 Partial Public Class Kullanici
     Public Property ID As Integer
     Public Property GCM_Reg_ID As String
-    Public Property AdSoyad As String
     Public Property EMail As String
     Public Property Tarih As Date
 

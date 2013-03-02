@@ -19,9 +19,9 @@ Public Class ValueController
         Try
             _Context.Kullanicis.Add(value)
             _Context.SaveChanges()
-            Return "Başarılı"
+            Return "True"
         Catch ex As Exception
-            Return "Bir sorun oluştu daha sonra  tekrar deneyiniz"
+            Return "False"
         End Try
     End Function
 

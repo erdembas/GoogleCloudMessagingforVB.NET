@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="GCMDatabaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="GCMDatabaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="GCMDatabaseModelStoreContainer">
           <EntitySet Name="Kullanici" EntityType="GCMDatabaseModel.Store.Kullanici" store:Type="Tables" Schema="dbo" />
         </EntityContainer>
@@ -14,12 +14,10 @@
           </Key>
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="GCM_Reg_ID" Type="varchar(max)" Nullable="false" />
-          <Property Name="AdSoyad" Type="varchar" MaxLength="150" />
           <Property Name="EMail" Type="varchar" MaxLength="150" />
           <Property Name="Tarih" Type="datetime" Nullable="false" />
         </EntityType>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="GCMDatabaseModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -30,11 +28,10 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="GCM_Reg_ID" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
-          <Property Name="AdSoyad" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
-          <Property Name="EMail" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
-          <Property Name="Tarih" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="GCM_Reg_ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EMail" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Tarih" Nullable="false" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -45,11 +42,10 @@
           <EntitySetMapping Name="Kullanicis">
             <EntityTypeMapping TypeName="GCMDatabaseModel.Kullanici">
               <MappingFragment StoreEntitySet="Kullanici">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="GCM_Reg_ID" ColumnName="GCM_Reg_ID" />
-                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
-                <ScalarProperty Name="EMail" ColumnName="EMail" />
                 <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="EMail" ColumnName="EMail" />
+                <ScalarProperty Name="GCM_Reg_ID" ColumnName="GCM_Reg_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -67,7 +63,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
