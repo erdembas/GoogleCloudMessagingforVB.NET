@@ -7,10 +7,9 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="GCM_Reg_ID" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
-    <Property Name="AdSoyad" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
-    <Property Name="EMail" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
-    <Property Name="Tarih" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="GCM_Reg_ID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EMail" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Tarih" Nullable="false" Precision="3" />
   </EntityType>
 </Schema>

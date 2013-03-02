@@ -4,11 +4,10 @@
     <EntitySetMapping Name="Kullanicis">
       <EntityTypeMapping TypeName="GCMDatabaseModel.Kullanici">
         <MappingFragment StoreEntitySet="Kullanici">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="GCM_Reg_ID" ColumnName="GCM_Reg_ID" />
-          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
-          <ScalarProperty Name="EMail" ColumnName="EMail" />
           <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+          <ScalarProperty Name="GCM_Reg_ID" ColumnName="GCM_Reg_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

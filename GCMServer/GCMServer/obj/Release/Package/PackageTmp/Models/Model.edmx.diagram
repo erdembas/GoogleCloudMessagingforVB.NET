@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="e3a31081ebe242ea9b081ed14196801b" Name="Diagram1">
-        <EntityTypeShape EntityType="GCMDatabaseModel.Kullanici" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GCMDatabaseModel.Kullanici" Width="1.5" PointX="10.327498437057948" PointY="2.8453742576974324" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

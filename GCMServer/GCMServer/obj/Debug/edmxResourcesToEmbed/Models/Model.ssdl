@@ -9,7 +9,6 @@
     </Key>
     <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="GCM_Reg_ID" Type="varchar(max)" Nullable="false" />
-    <Property Name="AdSoyad" Type="varchar" MaxLength="150" />
     <Property Name="EMail" Type="varchar" MaxLength="150" />
     <Property Name="Tarih" Type="datetime" Nullable="false" />
   </EntityType>

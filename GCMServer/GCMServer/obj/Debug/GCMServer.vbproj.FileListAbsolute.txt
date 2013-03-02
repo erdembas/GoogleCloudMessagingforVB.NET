@@ -45,7 +45,6 @@ D:\Projects\GitHub\GoogleCloudMessagingforVB.NET\GCMServer\GCMServer\bin\DotNetO
 D:\Projects\GitHub\GoogleCloudMessagingforVB.NET\GCMServer\GCMServer\bin\DotNetOpenAuth.OAuth.xml
 D:\Projects\GitHub\GoogleCloudMessagingforVB.NET\GCMServer\GCMServer\bin\DotNetOpenAuth.OpenId.xml
 D:\Projects\GitHub\GoogleCloudMessagingforVB.NET\GCMServer\GCMServer\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
-D:\Projects\GitHub\GoogleCloudMessagingforVB.NET\GCMServer\GCMServer\obj\Debug\GCMServer.vbprojResolveAssemblyReference.cache
 D:\Projects\GitHub\GoogleCloudMessagingforVB.NET\GCMServer\GCMServer\obj\Debug\GCMServer.Resources.resources
 D:\Projects\GitHub\GoogleCloudMessagingforVB.NET\GCMServer\GCMServer\obj\Debug\GCMServer.vbproj.GenerateResource.Cache
 D:\Projects\GitHub\GoogleCloudMessagingforVB.NET\GCMServer\GCMServer\obj\Debug\GCMServer.dll
